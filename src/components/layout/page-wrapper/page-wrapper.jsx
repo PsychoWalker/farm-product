@@ -4,12 +4,12 @@ import MainPage from "../../pages/main/main-page";
 import Footer from "../footer/footer";
 import "./style.css"
 
-function PageWrapper() {
+function PageWrapper({ ...prop }) {
     return (
         <>
             <Header />
             <main className="page-wrapper__main">
-                <MainPage />
+                <MainPage {...prop}/>
             </main>
             <Footer />
         </>

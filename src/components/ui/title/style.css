@@ -11,6 +11,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 150%; /* 27px */
+    margin: 0;
 }
 
 .title_big {
@@ -18,4 +19,5 @@
     font-style: normal;
     font-weight: 700;
     line-height: 115%;
+    margin: 100px 0 64px;
 }

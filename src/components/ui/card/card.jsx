@@ -2,13 +2,20 @@ import React from "react";
 import Title, {TitleSize} from "../title/title";
 import "./style.css";
 
-function AdvangedCard() {
+function AdvangedCard({
+    farmer,
+    head,
+    header,
+    about,
+    image
+                      }) {
+
     return (
-        <article className="card">
+        <article className={`card ${farmer}`}>
             <div className="card__block">
                 <figure className="card__figure">
                     <img
-                        src=""
+                        src={image}
                         className="card__image"
                         width={52}
                         height={52}
@@ -16,13 +23,11 @@ function AdvangedCard() {
                         />
                 </figure>
                 <div className="card__description">
-                    <span className="card__icon">Фермерские продукты</span>
-                    <Title size={TitleSize.SMALL}>Еда намного вкуснее</Title>
+                    <span className={`card__place ${farmer}`}>{head}</span>
+                    <Title size={TitleSize.SMALL}>{header}</Title>
                 </div>
             </div>
-            <p className="card__text">
-                Домашняя колбаса из мяса, соли и специй и колбаса из магазина — два настолько разных продукта, что они даже не родственники
-            </p>
+            <p className="card__text" dangerouslySetInnerHTML={{ __html: about}}/>
         </article>
     );
 }

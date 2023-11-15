@@ -2,11 +2,11 @@ import React from "react";
 import About from "../../blocks/about/about";
 import AdvangerList from "../../blocks/advanger-cards/advanger-list";
 
-function MainPage() {
+function MainPage({ advanger }) {
     return (
         <>
             <About />
-            <AdvangerList />
+            <AdvangerList advanger={advanger}/>
         </>
     )
 }
