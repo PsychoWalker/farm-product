@@ -7,8 +7,10 @@
 }
 
 .title_small {
-    line-height: 32px;
-    font-size: 28px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 27px */
 }
 
 .title_big {
