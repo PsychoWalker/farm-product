@@ -1,11 +1,11 @@
 import React from "react";
 import Title, { TitleSize } from "../../ui/title/title";
-import "./style.css";
 import farmer from "../../../assets/farmer-hello.png";
+import {AboutMain} from "./styled";
 
 function About() {
     return (
-        <section className="about">
+        <AboutMain>
             <div className="about__wrapper">
                 <Title size={TitleSize.BIG}>Магазин фермерских продуктов с доставкой</Title>
                 <p className="about__text">
@@ -15,7 +15,7 @@ function About() {
             <div className="about__wrapper">
                 <img src={farmer} alt=""/>
             </div>
-        </section>
+        </AboutMain>
     )
 }
 
