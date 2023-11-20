@@ -1,20 +1,20 @@
 import React from "react";
 import Title, { TitleSize } from "../../ui/title/title";
 import farmer from "../../../assets/farmer-hello.png";
-import {AboutMain} from "./styled";
+import {AboutMain, AboutText, AboutWrapper} from "./styled";
 
 function About() {
     return (
         <AboutMain>
-            <div className="about__wrapper">
+            <AboutWrapper>
                 <Title size={TitleSize.BIG}>Магазин фермерских продуктов с доставкой</Title>
-                <p className="about__text">
+                <AboutText>
                     Все продукты изготавливаются под заказ. Фермеры начинают готовить продукты за день до отправки заказа клиентам. Именно поэтому мы принимаем заказы заранее и доставляем продукты максимально свежими.
-                </p>
-            </div>
-            <div className="about__wrapper">
+                </AboutText>
+            </AboutWrapper>
+            <AboutWrapper>
                 <img src={farmer} alt=""/>
-            </div>
+            </AboutWrapper>
         </AboutMain>
     )
 }

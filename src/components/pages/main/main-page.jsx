@@ -8,7 +8,7 @@ function MainPage({ advanger }) {
             <About />
             <AdvangerList advanger={advanger}/>
         </>
-    )  in
+    )
 }
 
 export default MainPage;

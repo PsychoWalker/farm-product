@@ -1,26 +1,26 @@
 import React from "react";
 import Title, {TitleSize} from "../../ui/title/title";
 import Button from "../../ui/button/button";
-import "./style.css";
 import AdvangedCard from "../../ui/card/card";
+import {List, ListItem, ListList} from "./styled";
 
 function AdvangerList({ advanger }) {
     return (
-        <section className="list">
+        <List>
             {advanger?.length ? (
                     <>
             <Title size={TitleSize.BIG}>Почему фермерские продукты лучше?</Title>
-            <ul className="list__list">
+            <ListList $isGridList>
                 {advanger.map((advange) => (
-                    <li className="list__item" key={advange.id}>
+                    <ListItem key={advange.id}>
                         <AdvangedCard {...advange} />
-                    </li>
+                    </ListItem>
                 ))}
-            </ul>
+            </ListList>
             <Button minWidth={353}>Купить билет</Button>
                     </>
                 ) : null}
-        </section>
+        </List>
     );
 }
 

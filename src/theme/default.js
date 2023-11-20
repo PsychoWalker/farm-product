@@ -9,5 +9,6 @@ export const defaultTheme = {
     footerHeight: "80px",
     colorForButton: "#FC9B27",
     colorForButtonHover: "#FC7427",
-    colorWhite: "#ffffff"
+    colorWhite: "#ffffff",
+    pagePadding: "90px"
 }

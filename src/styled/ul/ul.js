@@ -1,6 +1,6 @@
 import styled, {css} from "styled-components";
 
-const gridList = css`
+const GridList = css`
   margin-left: ${(props) => props.$indent ? `-${props.$indent}px` : `-${props.theme.indent}`};
   margin-top: ${(props) => props.$indent ? `-${props.$indent}px` : `-${props.theme.indent}`};
   font-size: 0;
@@ -20,7 +20,7 @@ const gridList = css`
 const Ul = styled.ul`
   margin: 0;
   padding: 0;
-  ${(props) => (props.$isGridList ? gridList : "")}
+  ${(props) => (props.$isGridList ? GridList : "")}
 `;
 
 export default Ul;

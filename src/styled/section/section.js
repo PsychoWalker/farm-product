@@ -9,3 +9,5 @@ const Section = styled.section`
   position: relative;
   box-sizing: border-box;
  `;
+
+export default Section;

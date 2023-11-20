@@ -1,6 +1,12 @@
 import React from "react";
 import Title, {TitleSize} from "../title/title";
-import "./style.css";
+import {Cards, CardBlock, CardDescription, CardFigure, CardPlace} from "./styled";
+
+export const FarmerColor =  {
+    FARMER: "farmer",
+    MAGAZINE: "magazine",
+    DEFAULT: ""
+};
 
 function AdvangedCard({
     farmer,
@@ -11,9 +17,9 @@ function AdvangedCard({
                       }) {
 
     return (
-        <article className={`card ${farmer}`}>
-            <div className="card__block">
-                <figure className="card__figure">
+        <Cards $bgColor={farmer}>
+            <CardBlock>
+                <CardFigure>
                     <img
                         src={image}
                         className="card__image"
@@ -21,14 +27,14 @@ function AdvangedCard({
                         height={52}
                         alt="изображение тарелки"
                         />
-                </figure>
-                <div className="card__description">
-                    <span className={`card__place ${farmer}`}>{head}</span>
+                </CardFigure>
+                <CardDescription>
+                    <CardPlace $color={farmer}>{head}</CardPlace>
                     <Title size={TitleSize.SMALL}>{header}</Title>
-                </div>
-            </div>
+                </CardDescription>
+            </CardBlock>
             <p className="card__text" dangerouslySetInnerHTML={{ __html: about}}/>
-        </article>
+        </Cards>
     );
 }
 
