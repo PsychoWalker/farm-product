@@ -1,8 +1,8 @@
-const buyList = [
+const products = [
     {
         id: 0,
         title: 'Филе бедра цыплёнка',
-        src: 'https://downloader.disk.yandex.ru/preview/753d52e0761d038b05bd8652fc0e1dcd1e64073baf89dd3d95c2a2b63f88133d/656880e1/99F710eTGlH-5hEJgAc1a0hlBYw_m1VbZfBUOuH74R_SIcJScgfphPP5s0P9Ebyg5oaNxBUxHxzxLt12yB63UQ%3D%3D?uid=0&filename=meat-1.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=2048x2048',
+        src: 'https://4.downloader.disk.yandex.ru/preview/07c3135df9dfaed614ae981cdabf61b07cb66f7a50f2ee23b964a91f9c70ac2a/inf/99F710eTGlH-5hEJgAc1a0hlBYw_m1VbZfBUOuH74R_SIcJScgfphPP5s0P9Ebyg5oaNxBUxHxzxLt12yB63UQ%3D%3D?uid=474972737&filename=meat-1.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=474972737&tknv=v2&size=1920x931',
         price: '400',
         description: 'Филе бедра без кожи и кости. Птица содержится в свободных птичниках, выращивается на натуральных зерновых кормах, что влияет положительно на вкус мяса. Филейная часть бедра обладает насыщенным вкусом и мясным ароматом.',
         characteristic:
@@ -21,7 +21,7 @@ const buyList = [
     {
         id: 1,
         title: 'Филе бедра гуся',
-        src: 'https://downloader.disk.yandex.ru/preview/d2109df24b466ae7258b5ea54f224824d8f1671b5dd7d1820d9fe4105e660275/65688105/K0znsgu9QKiaWhTflzCjF5H-1MUodD9gWDAsIM5RaTgsQaWfma6FM5Z6vR8Fk5VV-QfKcvfpOntETXulVAGroQ%3D%3D?uid=0&filename=meat-2.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=1920x919',
+        src: 'https://1.downloader.disk.yandex.ru/preview/7b406f507adc8166423b4af2c4bc2838e9261e977e5a3142f3efad204ce676a3/inf/K0znsgu9QKiaWhTflzCjF5H-1MUodD9gWDAsIM5RaTgsQaWfma6FM5Z6vR8Fk5VV-QfKcvfpOntETXulVAGroQ%3D%3D?uid=474972737&filename=meat-2.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=474972737&tknv=v2&size=1920x931',
         price: '500',
         description: 'Филе бедра гуся - это тонко нарезанный продукт, который понравится всем любителям сырокопченых продуктов. Необычный вкус, аппетитный аромат и тонкое послевкусия отличает сырокопченого гуся от других подобных продуктов.',
         characteristic:
@@ -40,7 +40,7 @@ const buyList = [
     {
         id: 2,
         title: 'Мякоть бедра говяжья',
-        src: 'https://downloader.disk.yandex.ru/preview/753d52e0761d038b05bd8652fc0e1dcd1e64073baf89dd3d95c2a2b63f88133d/656880e1/99F710eTGlH-5hEJgAc1a0hlBYw_m1VbZfBUOuH74R_SIcJScgfphPP5s0P9Ebyg5oaNxBUxHxzxLt12yB63UQ%3D%3D?uid=0&filename=meat-1.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=2048x2048',
+        src: 'https://4.downloader.disk.yandex.ru/preview/07c3135df9dfaed614ae981cdabf61b07cb66f7a50f2ee23b964a91f9c70ac2a/inf/99F710eTGlH-5hEJgAc1a0hlBYw_m1VbZfBUOuH74R_SIcJScgfphPP5s0P9Ebyg5oaNxBUxHxzxLt12yB63UQ%3D%3D?uid=474972737&filename=meat-1.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=474972737&tknv=v2&size=1920x931',
         price: '700',
         description: 'Мякоть бедра говяжья - это тонко нарезанный продукт, который понравится всем любителям сырокопченых продуктов. Необычный вкус, аппетитный аромат и тонкое послевкусия отличает сырокопченого гуся от других подобных продуктов.',
         characteristic:
@@ -59,7 +59,7 @@ const buyList = [
     {
         id: 3,
         title: 'Грудка цыплёнка на кости',
-        src: 'https://downloader.disk.yandex.ru/preview/753d52e0761d038b05bd8652fc0e1dcd1e64073baf89dd3d95c2a2b63f88133d/656880e1/99F710eTGlH-5hEJgAc1a0hlBYw_m1VbZfBUOuH74R_SIcJScgfphPP5s0P9Ebyg5oaNxBUxHxzxLt12yB63UQ%3D%3D?uid=0&filename=meat-1.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=2048x2048',
+        src: 'https://1.downloader.disk.yandex.ru/preview/7b406f507adc8166423b4af2c4bc2838e9261e977e5a3142f3efad204ce676a3/inf/K0znsgu9QKiaWhTflzCjF5H-1MUodD9gWDAsIM5RaTgsQaWfma6FM5Z6vR8Fk5VV-QfKcvfpOntETXulVAGroQ%3D%3D?uid=474972737&filename=meat-2.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=474972737&tknv=v2&size=1920x931',
         price: '300',
         description: 'Мякоть бедра говяжья - это тонко нарезанный продукт, который понравится всем любителям сырокопченых продуктов. Необычный вкус, аппетитный аромат и тонкое послевкусия отличает сырокопченого гуся от других подобных продуктов.',
         characteristic:
@@ -78,7 +78,7 @@ const buyList = [
     {
         id: 4,
         title: 'Голень цыплёнка',
-        src: 'https://downloader.disk.yandex.ru/preview/d2109df24b466ae7258b5ea54f224824d8f1671b5dd7d1820d9fe4105e660275/65688105/K0znsgu9QKiaWhTflzCjF5H-1MUodD9gWDAsIM5RaTgsQaWfma6FM5Z6vR8Fk5VV-QfKcvfpOntETXulVAGroQ%3D%3D?uid=0&filename=meat-2.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=1920x919',
+        src: 'https://4.downloader.disk.yandex.ru/preview/07c3135df9dfaed614ae981cdabf61b07cb66f7a50f2ee23b964a91f9c70ac2a/inf/99F710eTGlH-5hEJgAc1a0hlBYw_m1VbZfBUOuH74R_SIcJScgfphPP5s0P9Ebyg5oaNxBUxHxzxLt12yB63UQ%3D%3D?uid=474972737&filename=meat-1.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=474972737&tknv=v2&size=1920x931',
         price: '500',
         description: 'Мякоть бедра говяжья - это тонко нарезанный продукт, который понравится всем любителям сырокопченых продуктов. Необычный вкус, аппетитный аромат и тонкое послевкусия отличает сырокопченого гуся от других подобных продуктов.',
         characteristic:
@@ -96,4 +96,4 @@ const buyList = [
     }
 ]
 
-export default buyList;
+export default products;

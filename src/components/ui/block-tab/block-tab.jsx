@@ -1,44 +1,47 @@
 import React, {useState} from "react";
-import {BlockDescription, BlockTabStyle} from "./styled";
+import {BlockDescription, BlockTabStyle, TabsLink} from "./styled";
 
-function BlockTab(description) {
-    const tabsItem = [
-        { title: "Описание", desc: description.children.children.description}
-        { title: "Характеристики", desc: [
-                ['Масса:', description.children.children.characteristic.weight[1]],
-                ['Срок годности:', description.children.children.characteristic.term],
-                ["Порода:", description.children.children.characteristic.pride],
-                ["Место происхождения:", description.children.children.characteristic.locate]
-            ]},
-        { title: "Характеристики", desc: [
-                ['Энергетическая ценность:', description.children.children.properties.energy],
-                ['Пищевая ценность:', description.children.children.properties.food],
-            ]}
-    ];
+function BlockTab(info) {
+    const [activeTab, setActiveTab] = useState(info.tabIndex);
 
-    const [active, setTabList] = useState(0);
-    const openTab = e => setTabList(+e.target.dataset.index);
+    const tabItems = info.tabs.map((item, index) => {
+        if (activeTab === index) {
+            return (
+                <>
+                    <TabsLink active key={index}>{item.title}</TabsLink>
+                </>
+            )
+        }
+        return (
+            <TabsLink href="#" key={index} onClick={() => {
+                setActiveTab(index)
+            }}>{item.title}</TabsLink>
+        )
+    });
+    const tabDesc = info.tabs.map((item, index) => {
+        if (activeTab === index) {
+            if (Array.isArray(item.desc)) {
+                item.desc.map((paragraph, index) => {
+                    console.log(paragraph)
+                    return (
+                        <>
+                            <p key={index}>111</p>
+                        </>
+                    )
+                })
+            }
+            return <p>{item.desc}</p>
+        }
+    });
 
-    const TabContent = ({title, content}) => {
+    return (<>
+        <BlockTabStyle>
+            {tabItems}
+        </BlockTabStyle>
         <BlockDescription>
-            <p>{content}</p>
+            {tabDesc}
         </BlockDescription>
-    }
-
-    return (
-        <>
-            <BlockTabStyle>
-                {tabsItem.map((n,  i) => (
-                    <a className = {`tablink ${i === active ? 'active' : ''}`}
-                    onClick={openTab}
-                    adta-index={i}
-                    >
-                        {n}
-                    </a>
-                    ))}
-            </BlockTabStyle>
-        </>
-    )
+    </>)
 }
 
 export default BlockTab;

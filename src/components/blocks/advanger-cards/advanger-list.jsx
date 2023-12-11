@@ -3,6 +3,8 @@ import Title, {TitleSize} from "../../ui/title/title";
 import Button from "../../ui/button/button";
 import AdvangedCard from "../../ui/card/card";
 import {List, ListItem, ListList} from "./styled";
+import {AppRoute} from "../../const";
+import Btn from "../../ui/button/button";
 
 function AdvangerList({ advanger }) {
     return (
@@ -17,7 +19,7 @@ function AdvangerList({ advanger }) {
                     </ListItem>
                 ))}
             </ListList>
-            <Button minWidth={353}>Купить билет</Button>
+            <Button minWidth={353} link={AppRoute.BUY}>Купить билет</Button>
                     </>
                 ) : null}
         </List>

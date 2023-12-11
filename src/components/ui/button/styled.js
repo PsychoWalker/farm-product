@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
-export const StyledButton = styled.a`
+export const StyledButton = styled(Link)`
     display: flex;
     max-width: 700px;
     font-size: ${(props) => props.theme.fontSizeDefault};
@@ -14,6 +15,8 @@ export const StyledButton = styled.a`
     gap: 12px;
     border:none;
     font-style: normal;
+  text-decoration: none;
+    cursor: pointer;
     font-weight: 700;
     line-height: 150%;
     transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out;
