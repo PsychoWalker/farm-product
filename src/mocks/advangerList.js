@@ -1,4 +1,3 @@
-import AdvangedCard from "../components/ui/card/card";
 const advangerList = [
     {
         id: 0,

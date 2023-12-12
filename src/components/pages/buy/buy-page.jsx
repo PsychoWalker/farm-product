@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import BuyBlock from "../../ui/buy-block/buy-block";
 import CheckMeat from "../../ui/check/check";
 import BuyCard from "../../layout/buy-card/buy-card";
-import { BuyBlockRight, BuySection, SliderBlock, StyledSlider, PriceValue, PriceLabel } from "./styled";
+import { BuyBlockRight, BuySection, SliderBlock, StyledSlider } from "./styled";
 import Btn from "../../ui/button/button";
 import {InputAddressStyled} from "../../ui/input/styled";
 import SwiperCore, { Pagination, Mousewheel, Scrollbar } from "swiper/core";
@@ -13,11 +13,6 @@ function BuyPage({ products }) {
 
     const selectProducts = selectProductIds.map((id) =>
         products.find((product) => product.id === id)
-    );
-
-    let fullPrice = selectProducts.reduce(
-        (sum, product) => (sum += product.price),
-        0
     );
 
     const handleOnClickProduct = (value, index) => {

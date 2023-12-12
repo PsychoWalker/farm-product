@@ -4,7 +4,6 @@ import Button from "../../ui/button/button";
 import AdvangedCard from "../../ui/card/card";
 import {List, ListItem, ListList} from "./styled";
 import {AppRoute} from "../../const";
-import Btn from "../../ui/button/button";
 
 function AdvangerList({ advanger }) {
     return (
