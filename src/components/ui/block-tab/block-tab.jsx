@@ -18,11 +18,11 @@ function BlockTab(info) {
             }}>{item.title}</TabsLink>
         )
     });
+    // eslint-disable-next-line array-callback-return
     const tabDesc = info.tabs.map((item, index) => {
         if (activeTab === index) {
             if (Array.isArray(item.desc)) {
                 item.desc.map((paragraph, index) => {
-                    console.log(paragraph)
                     return (
                         <>
                             <p key={index}>111</p>

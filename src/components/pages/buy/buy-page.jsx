@@ -11,10 +11,6 @@ function BuyPage({ products }) {
     const [swiperRef, setSwiperRef] = useState(null);
     const [selectProductIds, setSelectProductIds] = useState([]);
 
-    const selectProducts = selectProductIds.map((id) =>
-        products.find((product) => product.id === id)
-    );
-
     const handleOnClickProduct = (value, index) => {
         if (!selectProductIds.includes(value)) {
             swiperRef.slideTo(index, 200);
